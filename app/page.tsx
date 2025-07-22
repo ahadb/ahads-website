@@ -135,11 +135,27 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <div className="flex-1">
+        <div className="flex flex-col">
           <p className="text-zinc-600 dark:text-zinc-400">
-            I help founders, small teams, and enterprise teams adapt to AI by
-            turning ideas into intelligent, production-ready tools that ship
-            fast, scale smoothly, and deliver a lasting competitive advantage.
+            I help founders, startups, and enterprise teams bring AI to life
+            through smart, intuitive web apps and user interfaces that ship
+            fast, scale effortlessly, and deliver real business value.
+          </p>
+          <p className="mt-4 text-zinc-600 dark:text-zinc-400">
+            With 20 years of enterprise software experience and a deep focus on
+            AI-driven product development, I blend full-stack expertise with
+            product-first thinking to build web experiences that do more I
+            create reliable, scalable tools your team actually loves to use — so
+            you can focus on growing your business.
+          </p>
+          <p className="mt-4 text-zinc-600 dark:text-zinc-400">
+            Feel free to contact me at:{' '}
+            <a
+              className="underline dark:text-zinc-300"
+              href={`mailto:${EMAIL}`}
+            >
+              {EMAIL}
+            </a>
           </p>
         </div>
       </motion.section>
@@ -148,7 +164,9 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Selected Projects</h3>
+        <h3 className="mb-5 text-lg font-medium text-white">
+          Selected Projects
+        </h3>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
           {PROJECTS.map((project) => (
             <div key={project.name} className="space-y-2">
@@ -163,7 +181,7 @@ export default function Personal() {
               </div>
               <div className="px-1">
                 <a
-                  className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
+                  className={`font-base group relative inline-block font-[450] ${['NLP Interface for SQL', 'AI Powered Productivity'].includes(project.name) ? 'text-white' : 'text-blue-600 dark:text-blue-400'}`}
                   href={project.link}
                   target="_blank"
                 >
@@ -184,10 +202,10 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
-        <div className="flex flex-col space-y-2">
+        <div className="-ml-4 flex flex-col -space-y-3">
           {WORK_EXPERIENCE.map((job) => (
             <a
-              className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
+              className="relative overflow-hidden rounded-2xl hover:bg-transparent hover:no-underline"
               href={job.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -197,7 +215,7 @@ export default function Personal() {
                 className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
                 size={64}
               />
-              <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
+              <div className="relative h-full w-full rounded-[15px] p-4">
                 <div className="relative flex w-full flex-row justify-between">
                   <div>
                     <h4 className="font-normal dark:text-zinc-100">

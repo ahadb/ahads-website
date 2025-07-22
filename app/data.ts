@@ -48,8 +48,8 @@ export const PROJECTS: Project[] = [
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'Adaptaible',
-    title: 'Independent Consultant',
+    company: 'Independent Consultant',
+    title: 'AI Consultant & Full Stack Engineer',
     start: 'April 2025',
     end: 'Current',
     link: 'https://www.linkedin.com/in/ahadbokhari/',
@@ -64,18 +64,18 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     id: 'work1',
   },
   {
-    company: 'SS&C Technologies',
+    company: 'SS&C • JP Morgan • GE • BofA',
     title: 'Principal UI Software Engineer',
-    start: '2019',
+    start: '2014',
     end: '2021',
     link: 'https://www.linkedin.com/in/ahadbokhari/',
     id: 'work2',
   },
   {
-    company: 'JP Morgan Chase',
-    title: 'Sr. Software Engineer',
-    start: '2017',
-    end: '2019',
+    company: 'Contractor • Freelancer',
+    title: 'Web Developer & Designer',
+    start: '1997',
+    end: '2014',
     link: 'https://www.linkedin.com/in/ahadbokhari/',
     id: 'work3',
   },
@@ -93,20 +93,20 @@ export const BLOG_POSTS: BlogPost[] = [
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Github',
-    link: 'https://github.com/ibelick',
+    link: 'https://github.com/ahadb',
   },
-  {
-    label: 'Twitter',
-    link: 'https://twitter.com/ibelick',
-  },
+  // {
+  //   label: 'Twitter',
+  //   link: 'https://twitter.com/ibelick',
+  // },
   {
     label: 'LinkedIn',
-    link: 'https://www.linkedin.com/in/ibelick',
+    link: 'https://www.linkedin.com/in/ahadbokhari/',
   },
-  {
-    label: 'Instagram',
-    link: 'https://www.instagram.com/ibelick',
-  },
+  // {
+  //   label: 'Instagram',
+  //   link: 'https://www.instagram.com/ibelick',
+  // },
 ]
 
-export const EMAIL = 'your@email.com'
+export const EMAIL = 'ahadbokhari@gmail.com'

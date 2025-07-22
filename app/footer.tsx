@@ -72,13 +72,11 @@ export function Footer() {
       <div className="flex items-center justify-between">
         <a href="https://github.com/ibelick/nim" target="_blank">
           <TextLoop className="text-xs text-zinc-500">
-            <span>© 2024 Nim.</span>
-            <span>Built with Motion-Primitives.</span>
+            <span>© 2025 Ahad Bokhari</span>
+            <span>Hosted on Vercel</span>
           </TextLoop>
         </a>
-        <div className="text-xs text-zinc-400">
-          <ThemeSwitch />
-        </div>
+        <div className="text-xs text-zinc-400">{/* <ThemeSwitch /> */}</div>
       </div>
     </footer>
   )
