@@ -138,15 +138,16 @@ export default function Personal() {
         <div className="flex flex-col">
           <p className="text-zinc-600 dark:text-zinc-400">
             I help founders, startups, and enterprise teams bring AI to life
-            through smart, intuitive web apps and user interfaces that ship
-            fast, scale effortlessly, and deliver real business value.
+            through smart, intuitive web apps, tools and user interfaces, that
+            ship fast, scale effortlessly and deliver real business value.
           </p>
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-            With 20 years of enterprise software experience and a deep focus on
+            With 20 years of enterprise software experience and a focus on
             AI-driven product development, I blend full-stack expertise with
-            product-first thinking to build web experiences that do more I
-            create reliable, scalable tools your team actually loves to use — so
-            you can focus on growing your business.
+            scalable architecture and intelligent application thinking to build
+            web experiences that do more. I create reliable, high-impact tools
+            your team actually loves to use — so you can focus on growing your
+            business.
           </p>
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
             Feel free to contact me at:{' '}
