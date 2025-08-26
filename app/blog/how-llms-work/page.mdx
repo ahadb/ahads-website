@@ -24,11 +24,9 @@ That's it. But when you scale it up across billions of examples and hundreds of 
 
 LLMs go through three major training phases, each adding an essential layer of capability.
 
-### 1. Pretraining: Learn from the World
+#### 1. Pretraining: Learn from the World
 
-**Goal:** Learn general language structure and facts.
-
-In pretraining, the model ingests massive datasets: books, websites, Wikipedia, open-source code, and more. It's trained on trillions of tokens using a technique called _causal language modeling_ — predicting the next token, one after another.
+**Goal:** Learn general language structure and facts. In pretraining, the model ingests massive datasets: books, websites, Wikipedia, open-source code, and more. It's trained on trillions of tokens using a technique called _causal language modeling_ — predicting the next token, one after another.
 
 The model learns:
 
@@ -38,11 +36,9 @@ The model learns:
 
 But it doesn't yet know how to _follow instructions_. It's like a very smart parrot with no steering wheel.
 
-### 2. Fine-Tuning: Specialize the Model
+#### 2. Fine-Tuning: Specialize the Model
 
-**Goal:** Make the model good at a specific domain or task.
-
-Once pretrained, a model can be fine-tuned using smaller, curated datasets.
+**Goal:** Make the model good at a specific domain or task. Once pretrained, a model can be fine-tuned using smaller, curated datasets.
 
 Examples:
 
@@ -51,11 +47,9 @@ Examples:
 
 This helps the model perform better in a narrow domain but doesn't necessarily make it better at talking to humans.
 
-### 3. Instruction Tuning: Teach It to Follow You
+#### 3. Instruction Tuning: Teach It to Follow You
 
-**Goal:** Make the model helpful, safe, and steerable.
-
-Instruction tuning (sometimes combined with Reinforcement Learning from Human Feedback, or RLHF) trains the model on examples of how to respond to user prompts.
+**Goal:** Make the model helpful, safe, and steerable. Instruction tuning (sometimes combined with Reinforcement Learning from Human Feedback, or RLHF) trains the model on examples of how to respond to user prompts.
 
 These are structured like:
 
@@ -100,9 +94,7 @@ This feels conversational and smooth, but it's really just high-speed next-token
 
 ## But How Does It "Know" Things?
 
-It doesn't — not in the way humans do.
-
-LLMs have no memory, belief, or intent. But because they've seen so much text, they learn that:
+It doesn't — not in the way humans do. LLMs have no memory, belief, or intent. But because they've seen so much text, they learn that:
 
 > "The capital of France is" → is usually followed by "Paris".
 

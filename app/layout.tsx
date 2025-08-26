@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import { Navigation } from './navigation'
 import { Header } from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
@@ -17,7 +18,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   title: {
-    default: 'Ahad Bokhari - Full Stack Engineer & AI Consultant',
+    default: 'Ahad Bokhari - Gen AI & Cloud Engineering Consultant',
     template: '%s | Nim',
   },
   description:
@@ -42,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geist.variable} ${geistMono.variable} bg-gradient-to-br from-black via-[#0a0a23] via-[#12001a] to-[#0a0012] tracking-tight antialiased`}
+        className={`${geist.variable} ${geistMono.variable} bg-white tracking-tight antialiased`}
       >
         <ThemeProvider
           enableSystem={true}
@@ -51,7 +52,8 @@ export default function RootLayout({
           defaultTheme="dark"
         >
           <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
-            <div className="relative mx-auto w-full max-w-screen-md flex-1 px-4 pt-20">
+            <div className="relative mx-auto w-full max-w-[900px] flex-1 px-4 pt-8">
+              <Navigation />
               <Header />
               {children}
               <Footer />

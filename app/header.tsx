@@ -19,32 +19,28 @@ export function Header() {
         //   )`,
         // }}
       />
-      <div className="relative z-10 flex items-center gap-4">
-        <div className="relative h-16 w-16 overflow-hidden rounded-full ring-3 ring-zinc-200/5 dark:ring-white/10">
-          <Image
-            src="/ahadb-profile.png"
-            alt="Ahad Bokhari"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-        <div>
-          <Link
-            href="/"
-            className="text-xl font-medium text-black dark:text-white"
-          >
-            Ahad Bokhari
-          </Link>
-          <TextEffect
-            as="p"
-            preset="fade"
-            per="char"
-            className="text-zinc-600 dark:text-zinc-500"
-            delay={0.5}
-          >
-            AI Consultant & Full Stack Engineer
-          </TextEffect>
+      <div className="relative z-10 flex w-full items-center justify-between">
+        <div className="flex items-center gap-4">
+          <div className="relative h-20 w-20 overflow-hidden rounded-full ring-4 ring-gray-300">
+            <Image
+              src="/ahadb-profile.png"
+              alt="Ahad Bokhari"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <div>
+            <Link
+              href="/"
+              className="text-3xl font-bold text-gray-900 transition-colors hover:text-blue-600"
+            >
+              Ahad Bokhari
+            </Link>
+            <p className="text-lg font-medium text-gray-500">
+              Gen AI & Cloud Engineering Consultant
+            </p>
+          </div>
         </div>
       </div>
     </header>
