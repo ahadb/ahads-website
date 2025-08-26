@@ -23,7 +23,7 @@ export function Header() {
         <div className="flex items-center gap-4">
           <div className="relative h-20 w-20 overflow-hidden rounded-full ring-4 ring-gray-300">
             <Image
-              src="/ahadb-profile.png"
+              src="/ahad-smile-profile.png"
               alt="Ahad Bokhari"
               fill
               className="object-cover"
