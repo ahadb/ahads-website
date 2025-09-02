@@ -724,7 +724,7 @@ export default function Personal() {
         id="contact"
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
-        className="-mt-12 bg-gray-50 pt-6 pb-12"
+        className="-mt-12 bg-gray-100 px-8 py-8"
       >
         <h3 className="mb-2 text-2xl font-normal text-gray-900">Get Started</h3>
         <p className="mb-4 text-gray-700">

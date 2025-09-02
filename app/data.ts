@@ -197,11 +197,12 @@ export const CASE_STUDIES: CaseStudy[] = [
     businessChallenge:
       'Organizations struggle with information retrieval from large document repositories, leading to hours spent searching through documents, inconsistent answers to questions, and knowledge workers unable to access critical information quickly. Traditional search methods lack context and accuracy.',
     solution:
-      'Built a comprehensive Retrieval-Augmented Generation (RAG) system that processes documents through a complete pipeline: cleaning and parsing PDFs, intelligent chunking with overlap strategies, vector embedding generation using OpenAI, storage in Supabase vector database, semantic retrieval with similarity search, and context-aware answer generation. The solution includes a React frontend for natural language queries, OpenAI API integration for advanced language understanding, and a Python backend orchestrating the entire RAG workflow.',
+      'Built a comprehensive Retrieval-Augmented Generation (RAG) system that processes documents through a complete pipeline: cleaning and parsing PDFs, intelligent chunking with overlap strategies, vector embedding generation using OpenAI, storage in Supabase vector database, semantic retrieval with similarity search, and context-aware answer generation. The solution leverages LangChain for advanced document processing, chain orchestration, and intelligent retrieval strategies. The system includes a React frontend for natural language queries, OpenAI API integration for advanced language understanding, and a Python backend with LangChain orchestrating the entire RAG workflow.',
     businessImpact:
       'Demonstrates potential to reduce information retrieval time from hours to seconds, provide 90%+ accuracy in answers, and enable instant access to organizational knowledge. The solution scales to handle enterprise document volumes while maintaining context and relevance.',
     technicalStack: [
       'OpenAI API',
+      'LangChain',
       'Supabase',
       'Vector Embeddings',
       'Python',

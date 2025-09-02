@@ -251,6 +251,9 @@ export default function CaseStudyPage({
                         database for efficient similarity search
                       </li>
                       <li>
+                        • <strong>LangChain Integration:</strong> Advanced document processing, chain orchestration, and intelligent retrieval strategies
+                      </li>
+                      <li>
                         • <strong>Semantic Retrieval:</strong> Context-aware
                         document retrieval using cosine similarity
                       </li>
@@ -272,6 +275,9 @@ export default function CaseStudyPage({
                       <li>
                         • <strong>Chunking Strategy:</strong> Recursive
                         character splitting with configurable overlap
+                      </li>
+                      <li>
+                        • <strong>LangChain Framework:</strong> Document loaders, text splitters, and retrieval chains for robust RAG implementation
                       </li>
                       <li>
                         • <strong>Vector Database:</strong> Supabase pgvector
