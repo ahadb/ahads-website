@@ -144,7 +144,30 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 export const CASE_STUDIES: CaseStudy[] = [
   {
-    title: 'Proof of Concept: NLP-to-SQL Interface for Enterprise Databases',
+    title: 'AI-Powered Workflow Automation with n8n and LangChain',
+    client: 'Enterprise Workflow Management',
+    industry: 'SMBs',
+    businessChallenge:
+      'Organizations face inefficiencies in managing cross-platform workflows and repetitive tasks that consume valuable time. Traditional automation tools handle triggers and actions but lack the intelligence to make contextual decisions. Businesses need smarter systems that can reason, adapt, and integrate with existing APIs while remaining cost-effective and scalable.',
+    solution:
+      'Built an AI-powered workflow automation system by integrating LangChain\'s reasoning capabilities into n8n\'s workflow engine. This hybrid approach combines structured automation (n8n) with AI-powered contextual decision-making (LangChain). The system executes workflows such as document summarization, CRM updates, and automated email drafting with dynamic AI intelligence layered on top of existing integrations.',
+    businessImpact:
+      'This demo demonstrates the potential to reduce manual workflow management time by 80%, enable context-aware automation across tools without custom coding, scale AI-powered workflows across departments with minimal engineering overhead, and deliver intelligent automation rather than simple trigger-action pipelines.',
+    technicalStack: [
+      'n8n',
+      'LangChain',
+      'OpenAI API',
+      'Supabase',
+      'Docker',
+      'Python',
+    ],
+    image: '/automation.png',
+    slug: 'ai-workflow-automation',
+    duration: '2 weeks',
+    teamSize: 'Solo developer',
+  },
+  {
+    title: 'NLP-to-SQL Interface for Enterprise Databases',
     client: 'Financial Services Industry',
     industry: 'Financial Services',
     businessChallenge:
@@ -168,7 +191,7 @@ export const CASE_STUDIES: CaseStudy[] = [
     teamSize: 'Solo developer',
   },
   {
-    title: 'Proof of Concept: RAG-Powered Document Intelligence System',
+    title: 'RAG-Powered Document Intelligence System',
     client: 'Enterprise Knowledge Management',
     industry: 'Technology',
     businessChallenge:

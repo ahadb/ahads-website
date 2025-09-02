@@ -60,7 +60,7 @@ export default function CaseStudyPage({
         <div className="space-y-6">
           <div className="space-y-4">
             <div className="flex items-center gap-4">
-              <span className="inline-block rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-700">
+              <span className="inline-block rounded-lg border border-blue-300 bg-blue-100 px-4 py-2 text-sm font-medium text-gray-800">
                 {caseStudy.industry}
               </span>
               <span className="text-sm text-gray-500">
@@ -89,8 +89,10 @@ export default function CaseStudyPage({
               </h2>
               <p className="leading-relaxed text-gray-700">
                 {caseStudy.slug === 'nlp-sql-enterprise'
-                  ? 'This proof of concept demonstrates how natural language processing can bridge the gap between business users and complex enterprise databases, potentially reducing query time from hours to minutes while eliminating dependency on technical teams.'
-                  : 'This proof of concept demonstrates how Retrieval-Augmented Generation (RAG) can transform enterprise knowledge management, providing instant access to organizational information with high accuracy and context awareness.'}
+                  ? 'This demo demonstrates how natural language processing can bridge the gap between business users and complex enterprise databases, potentially reducing query time from hours to minutes while eliminating dependency on technical teams.'
+                  : caseStudy.slug === 'rag-document-intelligence'
+                  ? 'This demo demonstrates how Retrieval-Augmented Generation (RAG) can transform enterprise knowledge management, providing instant access to organizational information with high accuracy and context awareness.'
+                  : 'This demo demonstrates how combining n8n\'s low-code workflow automation with LangChain\'s advanced AI orchestration can transform repetitive business operations into intelligent, automated workflows. The solution showcases the ability to integrate multiple data sources, automate decision-making, and create agentic pipelines with minimal manual intervention.'}
               </p>
             </div>
 
@@ -119,7 +121,7 @@ export default function CaseStudyPage({
                         </li>
                         <li>• Business users lack SQL expertise</li>
                       </>
-                    ) : (
+                    ) : caseStudy.slug === 'rag-document-intelligence' ? (
                       <>
                         <li>
                           • Hours spent searching through document repositories
@@ -130,6 +132,13 @@ export default function CaseStudyPage({
                           information quickly
                         </li>
                         <li>• Traditional search lacks context and accuracy</li>
+                      </>
+                    ) : (
+                      <>
+                        <li>• Manual effort in repetitive workflows (reporting, data transfer, notifications)</li>
+                        <li>• Automation tools limited to "if-this-then-that" logic without intelligence</li>
+                        <li>• Difficulty integrating LLM reasoning into real business pipelines</li>
+                        <li>• Lack of flexible orchestration across APIs and databases</li>
                       </>
                     )}
                   </ul>
@@ -169,7 +178,7 @@ export default function CaseStudyPage({
                           • React frontend with intuitive natural language input
                         </li>
                       </>
-                    ) : (
+                    ) : caseStudy.slug === 'rag-document-intelligence' ? (
                       <>
                         <li>
                           • Complete RAG pipeline: PDF cleaning, parsing, and
@@ -189,6 +198,14 @@ export default function CaseStudyPage({
                         <li>
                           • React frontend with natural language query interface
                         </li>
+                      </>
+                    ) : (
+                      <>
+                        <li>• n8n Workflow Orchestration: Triggers and manages multi-step automation pipelines</li>
+                        <li>• LangChain Integration: Provides AI reasoning, context assembly, and tool use within workflows</li>
+                        <li>• Vector Database Integration: Stores embeddings for semantic search and contextual memory</li>
+                        <li>• LLM-Powered Agents: Handle natural language inputs, API decision-making, and response generation</li>
+                        <li>• API Integrations: Slack, Google Drive, CRM, and internal databases</li>
                       </>
                     )}
                   </ul>
@@ -274,6 +291,77 @@ export default function CaseStudyPage({
               </div>
             )}
 
+            {/* Workflow Architecture (Workflow Automation case study only) */}
+            {caseStudy.slug === 'ai-workflow-automation' && (
+              <div>
+                <h2 className="mb-4 text-xl font-semibold text-gray-900">
+                  Workflow Architecture
+                </h2>
+                <div className="space-y-4">
+                  <p className="leading-relaxed text-gray-700">
+                    The solution implements a modular AI-automation pipeline combining n8n nodes with LangChain agents for context-aware automation.
+                  </p>
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                    <h4 className="mb-2 font-semibold text-gray-800">
+                      Workflow Steps:
+                    </h4>
+                    <ul className="space-y-1 text-sm text-gray-700">
+                      <li>
+                        • <strong>Trigger Event:</strong> New document uploaded to Google Drive or CRM entry created
+                      </li>
+
+                      <li>
+                        • <strong>LangChain Reasoning:</strong> AI agent determines next steps (summarize, categorize, notify team)
+                      </li>
+                      <li>
+                        • <strong>Contextual Memory:</strong> Embeddings stored for future semantic queries
+                      </li>
+                      <li>
+                        • <strong>Automated Action:</strong> n8n executes follow-ups (send Slack summary, update CRM, email client)
+                      </li>
+                      <li>
+                        • <strong>Feedback Loop:</strong> Logs decisions and updates workflow for continuous improvement
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Technical Implementation (Workflow Automation case study only) */}
+            {caseStudy.slug === 'ai-workflow-automation' && (
+              <div>
+                <h2 className="mb-4 text-xl font-semibold text-gray-900">
+                  Technical Implementation
+                </h2>
+                <div className="space-y-4">
+                  <p className="leading-relaxed text-gray-700">
+                    The solution leverages modern automation and AI technologies to create intelligent, scalable workflow systems.
+                  </p>
+                  <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                    <h4 className="mb-2 font-semibold text-gray-800">
+                      Core Technologies:
+                    </h4>
+                    <ul className="space-y-1 text-sm text-gray-700">
+                      <li>
+                        • <strong>n8n:</strong> Low-code orchestration of workflows, API triggers, and task automation
+                      </li>
+                      <li>
+                        • <strong>LangChain:</strong> Intelligent context management, tool usage, and natural language decision-making
+                      </li>
+
+                      <li>
+                        • <strong>LLMs:</strong> OpenAI GPT models for summarization, reasoning, and content generation
+                      </li>
+                      <li>
+                        • <strong>Infrastructure:</strong> Docker-based deployment for scalability, security, and monitoring
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            )}
+
             {/* Business Impact */}
             <div>
               <h2 className="mb-4 text-xl font-semibold text-gray-900">
@@ -311,7 +399,7 @@ export default function CaseStudyPage({
                         </div>
                       </div>
                     </>
-                  ) : (
+                  ) : caseStudy.slug === 'rag-document-intelligence' ? (
                     <>
                       <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
                         <div className="text-2xl font-bold text-gray-900">
@@ -335,6 +423,33 @@ export default function CaseStudyPage({
                         </div>
                         <div className="text-sm text-gray-700">
                           Knowledge Access
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                        <div className="text-2xl font-bold text-gray-900">
+                          80%+
+                        </div>
+                        <div className="text-sm text-gray-700">
+                          Reduction in Manual Work
+                        </div>
+                      </div>
+                      <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                        <div className="text-2xl font-bold text-gray-900">
+                          Seamless
+                        </div>
+                        <div className="text-sm text-gray-700">
+                          Cross-Platform Integration
+                        </div>
+                      </div>
+                      <div className="rounded-lg border border-gray-200 bg-gray-50 p-4 text-center">
+                        <div className="text-2xl font-bold text-gray-900">
+                          Dynamic
+                        </div>
+                        <div className="text-sm text-gray-700">
+                          AI Decision Making
                         </div>
                       </div>
                     </>
@@ -400,7 +515,7 @@ export default function CaseStudyPage({
                       </ul>
                     </div>
                   </>
-                ) : (
+                ) : caseStudy.slug === 'rag-document-intelligence' ? (
                   <>
                     <p className="leading-relaxed text-gray-700">
                       The solution leverages Supabase's modern cloud
@@ -444,6 +559,28 @@ export default function CaseStudyPage({
                       </ul>
                     </div>
                   </>
+                ) : (
+                  <>
+                    <p className="leading-relaxed text-gray-700">
+                      The solution leverages n8n's self-hosted environment alongside modern database infrastructure for security and scalability.
+                    </p>
+                    <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+                      <h4 className="mb-2 font-semibold text-gray-800">
+                        Infrastructure Components:
+                      </h4>
+                      <ul className="space-y-1 text-sm text-gray-700">
+                        <li>
+                          • <strong>n8n Self-Hosted:</strong> Secure, extensible workflow orchestration
+                        </li>
+                        <li>
+                          • <strong>Supabase:</strong> Database for data storage and management
+                        </li>
+                        <li>
+                          • <strong>Docker Deployment:</strong> Containerized architecture for portability
+                        </li>
+                      </ul>
+                    </div>
+                  </>
                 )}
               </div>
             </div>
@@ -476,7 +613,7 @@ export default function CaseStudyPage({
                           • Week 3: Frontend interface, testing, and deployment
                         </li>
                       </>
-                    ) : (
+                    ) : caseStudy.slug === 'rag-document-intelligence' ? (
                       <>
                         <li>• Week 1: Core RAG engine and vector embeddings</li>
                         <li>
@@ -485,6 +622,11 @@ export default function CaseStudyPage({
                         <li>
                           • Week 3: Frontend interface, testing, and deployment
                         </li>
+                      </>
+                    ) : (
+                      <>
+                        <li>• Week 1: n8n workflow setup, LangChain integration, and vector DB connection</li>
+                        <li>• Week 2: End-to-end testing, API integrations, and workflow automation deployment</li>
                       </>
                     )}
                   </ul>
@@ -515,7 +657,7 @@ export default function CaseStudyPage({
                 </div>
                 <div className="flex justify-between">
                   <span className="font-medium">Project Type:</span>
-                  <span>Proof of Concept</span>
+                  <span>Demo</span>
                 </div>
               </div>
 
@@ -530,7 +672,7 @@ export default function CaseStudyPage({
                   >
                     View NLP-to-SQL Demo →
                   </a>
-                ) : (
+                ) : caseStudy.slug === 'rag-document-intelligence' ? (
                   <a
                     href="https://rag-frontend-production-257b.up.railway.app/"
                     target="_blank"
@@ -538,6 +680,13 @@ export default function CaseStudyPage({
                     className="text-sm text-blue-600 transition-colors hover:text-blue-700"
                   >
                     View RAG Demo →
+                  </a>
+                ) : (
+                  <a
+                    href="#"
+                    className="text-sm text-gray-500 cursor-not-allowed"
+                  >
+                    Demo Coming Soon →
                   </a>
                 )}
               </div>
@@ -568,9 +717,11 @@ export default function CaseStudyPage({
                 Ready to Build Something Similar?
               </h3>
               <p className="mb-3 text-sm text-gray-700">
-                {caseStudy.slug === 'nlp-sql-enterprise'
-                  ? 'This proof of concept demonstrates the potential for AI-powered database interfaces in your organization.'
-                  : 'This proof of concept demonstrates the potential for RAG-powered knowledge management in your organization.'}
+                                  {caseStudy.slug === 'nlp-sql-enterprise'
+                  ? 'This demo demonstrates the potential for AI-powered database interfaces in your organization.'
+                  : caseStudy.slug === 'rag-document-intelligence'
+                  ? 'This demo demonstrates the potential for RAG-powered knowledge management in your organization.'
+                  : 'This demo demonstrates the potential for AI-powered workflow automation in your organization.'}
               </p>
               <Link
                 href="/#contact"
