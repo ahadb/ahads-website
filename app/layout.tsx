@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   title: {
-    default: 'Ahad Bokhari - Gen AI & Cloud Engineering Consultant',
+    default: 'Ahad Bokhari - Senior Systems & AI Software Engineer',
     template: '%s | Nim',
   },
   description:

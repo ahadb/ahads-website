@@ -72,7 +72,7 @@ export function Footer() {
       <div className="flex items-center justify-between">
         <a href="https://github.com/ibelick/nim" target="_blank">
           <TextLoop className="text-xs text-zinc-500">
-            <span>© 2025 Ahad Bokhari</span>
+            <span>© 2026 Ahad Bokhari</span>
             <span>Hosted on Vercel</span>
           </TextLoop>
         </a>

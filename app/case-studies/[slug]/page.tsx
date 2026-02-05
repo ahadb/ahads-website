@@ -644,59 +644,93 @@ export default function CaseStudyPage({
           {/* Sidebar */}
           <div className="space-y-4">
             {/* Project Details */}
-            <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
-              <h3 className="mb-3 text-lg font-semibold text-gray-900">
-                Project Details
-              </h3>
-              <div className="space-y-2 text-sm text-gray-600">
-                <div className="flex justify-between">
-                  <span className="font-medium">Duration:</span>
-                  <span>{caseStudy.duration}</span>
+            {caseStudy.slug === 'nlp-sql-enterprise' ? (
+              <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+                <h3 className="mb-3 text-lg font-semibold text-gray-900">
+                  System Architecture
+                </h3>
+                <div className="space-y-3 text-sm text-gray-700">
+                  <p>
+                    Multi-stage validation pipeline: Query parsing → Schema
+                    inference → SQL generation → Security validation → Execution
+                  </p>
+                  <p>Infrastructure: Containerized services, AWS deployment</p>
+                  <p>
+                    Stack: Python • FastAPI • React • OpenAI API • PostgreSQL
+                  </p>
                 </div>
-                <div className="flex justify-between">
-                  <span className="font-medium">Team Size:</span>
-                  <span>{caseStudy.teamSize}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="font-medium">Industry:</span>
-                  <span>{caseStudy.industry}</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="font-medium">Project Type:</span>
-                  <span>Demo</span>
+                <div className="mt-4 border-t border-gray-200 pt-3">
+                  <a
+                    href="https://github.com/ahadb/nlp-to-sql-ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-blue-600 transition-colors hover:text-blue-700"
+                  >
+                    View Code on GitHub →
+                  </a>
                 </div>
               </div>
+            ) : caseStudy.slug === 'rag-document-intelligence' ? (
+              <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+                <h3 className="mb-3 text-lg font-semibold text-gray-900">
+                  System Architecture
+                </h3>
+                <div className="space-y-3 text-sm text-gray-700">
+                  <p>
+                    Complete RAG pipeline: Document ingestion → Chunking →
+                    Embedding → Vector storage → Semantic retrieval → Answer
+                    generation
+                  </p>
+                  <p>
+                    Infrastructure: Supabase cloud platform with pgvector extension
+                  </p>
+                </div>
+                <div className="mt-4 border-t border-gray-200 pt-3">
+                  <a
+                    href="https://github.com/ahadb/ask-my-docs-rag-ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-blue-600 transition-colors hover:text-blue-700"
+                  >
+                    View Code on GitHub →
+                  </a>
+                </div>
+              </div>
+            ) : (
+              <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
+                <h3 className="mb-3 text-lg font-semibold text-gray-900">
+                  Project Details
+                </h3>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <div className="flex justify-between">
+                    <span className="font-medium">Duration:</span>
+                    <span>{caseStudy.duration}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Team Size:</span>
+                    <span>{caseStudy.teamSize}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Industry:</span>
+                    <span>{caseStudy.industry}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="font-medium">Project Type:</span>
+                    <span>Demo</span>
+                  </div>
+                </div>
 
-              <div className="mt-4 border-t border-gray-200 pt-3">
-                <div className="mb-2 text-xs text-gray-500">View Project</div>
-                {caseStudy.slug === 'nlp-sql-enterprise' ? (
-                  <a
-                    href="http://nlp-to-sql-frontend-prod.s3-website-us-east-1.amazonaws.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-blue-600 transition-colors hover:text-blue-700"
-                  >
-                    View NLP-to-SQL Demo →
-                  </a>
-                ) : caseStudy.slug === 'rag-document-intelligence' ? (
-                  <a
-                    href="https://rag-frontend-production-257b.up.railway.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-blue-600 transition-colors hover:text-blue-700"
-                  >
-                    View RAG Demo →
-                  </a>
-                ) : (
+                <div className="mt-4 border-t border-gray-200 pt-3">
+                  <div className="mb-2 text-xs text-gray-500">View Project</div>
                   <a
                     href="#"
                     className="text-sm text-gray-500 cursor-not-allowed"
                   >
                     Demo Coming Soon →
                   </a>
-                )}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Technical Stack */}
             <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm">
@@ -717,25 +751,6 @@ export default function CaseStudyPage({
               </div>
             </div>
 
-            {/* Next Steps */}
-            <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
-              <h3 className="mb-2 text-lg font-semibold text-gray-900">
-                Ready to Build Something Similar?
-              </h3>
-              <p className="mb-3 text-sm text-gray-700">
-                                  {caseStudy.slug === 'nlp-sql-enterprise'
-                  ? 'This demo demonstrates the potential for AI-powered database interfaces in your organization.'
-                  : caseStudy.slug === 'rag-document-intelligence'
-                  ? 'This demo demonstrates the potential for RAG-powered knowledge management in your organization.'
-                  : 'This demo demonstrates the potential for AI-powered workflow automation in your organization.'}
-              </p>
-              <Link
-                href="/#contact"
-                className="inline-block w-full rounded-lg bg-gray-900 px-3 py-2 text-center font-medium text-white transition-colors hover:bg-gray-800"
-              >
-                Let's Discuss Your Project
-              </Link>
-            </div>
           </div>
         </div>
       </motion.section>

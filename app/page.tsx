@@ -214,41 +214,217 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <div className="flex flex-col">
-          <h1 className="mb-2 text-2xl font-normal text-gray-900">
-            Hello there.
-          </h1>
-          <p className="text-gray-700">
-            I help founders and tech leaders turn AI ideas into production-ready
-            systems fast — going from concept to launch in weeks, not months.
-            With 20+ years in enterprise software and deep in LLMs, RAG,
-            automation workflows, agentic systems, and cloud-native platforms I
-            deliver solutions that scale smoothly, cut costs, and create
-            measurable business impact.
+          <p className="mb-4 text-gray-700">
+            I build production AI systems for high-stakes environments where
+            failure has consequences.
           </p>
-          <div className="mt-6 flex items-center justify-between">
-            <p className="text-sm text-gray-600">
-              <span className="text-gray-500">↪</span>{' '}
+          <p className="mb-4 text-gray-700">
+            15+ years building enterprise platforms. 7 years on Wall Street
+            equities desks (Nomura VP, JP Morgan) taught me what production
+            systems in regulated environments actually require—not demos, but
+            infrastructure with policy enforcement, audit trails, and controlled
+            execution. Most recently: applying that discipline to AI platforms for
+            defense contractors.
+          </p>
+          <p className="mb-4 text-gray-700">
+            I focus on the gap between AI capabilities and production readiness.
+            Enterprises need governance layers, orchestration systems, and
+            execution controls that make LLMs deployable in finance, defense, and
+            other regulated industries.
+          </p>
+          <div className="mb-4">
+            <p className="mb-2 font-semibold text-gray-900">
+              Core Expertise:
+            </p>
+            <p className="text-gray-700">
+              Event-driven architecture • API orchestration • Service boundaries &
+              contracts • Stakeholder engagement & cross-functional delivery • AI
+              governance & policy enforcement • Agentic systems • Execution control
+              & workflow reliability • RAG pipelines • Production observability
+            </p>
+          </div>
+          <div className="mt-1 flex items-center space-x-2">
+            <a
+              href="https://www.linkedin.com/in/ahadbokhari/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 underline hover:text-gray-900"
+            >
+              LinkedIn
+            </a>
+            <span className="text-gray-400">|</span>
+            <a
+              href="https://github.com/ahadb"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 underline hover:text-gray-900"
+            >
+              GitHub
+            </a>
+          </div>
+        </div>
+        <div className="mt-8 border-t border-gray-200"></div>
+      </motion.section>
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+        className="-mt-6"
+      >
+        <p className="mb-2 text-base font-semibold uppercase tracking-wide text-gray-900">
+          Featured System
+        </p>
+        <div className="flex gap-6">
+          <div className="flex-shrink-0">
+            <div className="group flex h-69 w-72 flex-col justify-start border-1 border-gray-500 bg-white shadow-[3px_3px_0px_rgba(0,0,0,0.15)] transition-all duration-200 hover:scale-[1.02] hover:border-blue-400 hover:shadow-[4px_4px_0px_rgba(0,0,0,0.25)]">
+              <div className="flex h-full w-full overflow-hidden">
+                <img
+                  src="/governance_arch.png"
+                  alt="AI Policy Governance Platform"
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+            <div className="mt-4 flex items-center space-x-2">
               <a
-                href="https://ahadb.github.io/"
+                href="https://lucid.app/lucidchart/3e60cae0-e210-4855-ad53-53f0a3bae7f3/edit?viewport_loc=50%2C-17%2C2878%2C2871%2C0_0&invitationId=inv_7d457cde-50f8-4740-b81f-c64bf82ccd12"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline hover:text-gray-800"
+                className="text-gray-700 underline hover:text-gray-900"
               >
-                Read my old blog
+                Architecture Diagram
               </a>
-            </p>
-            <div className="flex items-center space-x-4">
-              <Link
-                href="/case-studies"
-                className="cursor-pointer rounded-lg border border-gray-400 bg-gray-900 px-6 py-1 text-sm text-white shadow-sm transition-all duration-200 hover:bg-gray-800"
-              >
-                View Outcomes
-              </Link>
+              <span className="text-gray-400">|</span>
               <a
-                href="#contact"
-                className="cursor-pointer rounded-lg border border-gray-400 bg-white px-6 py-1 text-sm text-gray-900 shadow-sm transition-all duration-200 hover:bg-gray-50"
+                href="https://lucid.app/lucidchart/a639c3b2-5f57-45b1-b883-9c21f1f4e904/edit?viewport_loc=18%2C-404%2C2830%2C2296%2C0_0&invitationId=inv_cb011cd4-2674-4612-9266-48db6bd927aa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 underline hover:text-gray-900"
               >
-                Start Your Project
+                Flow Diagram
+              </a>
+            </div>
+          </div>
+          <div className="flex-1">
+            <h3 className="mb-2 text-2xl font-normal text-gray-900">
+              AI Policy Governance Platform
+            </h3>
+            <p className="mb-4 text-gray-700">
+              Enterprise AI control plane with pluggable policy enforcement,
+              dual-checkpoint validation, full audit trails, and human-in-the-loop
+              workflows.
+            </p>
+            <p className="mb-4 text-gray-700">
+              <span className="font-semibold">Architecture:</span> Event-driven •
+              Microkernel (plugin-based) • Policy-gated orchestration
+            </p>
+            {/* <div className="mb-4 flex items-center space-x-2">
+              <a
+                href="https://lucid.app/lucidchart/3e60cae0-e210-4855-ad53-53f0a3bae7f3/edit?viewport_loc=50%2C-17%2C2878%2C2871%2C0_0&invitationId=inv_7d457cde-50f8-4740-b81f-c64bf82ccd12"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 underline hover:text-gray-900"
+              >
+                Architecture Diagram
+              </a>
+              <span className="text-gray-400">|</span>
+              <a
+                href="https://lucid.app/lucidchart/a639c3b2-5f57-45b1-b883-9c21f1f4e904/edit?viewport_loc=18%2C-404%2C2830%2C2296%2C0_0&invitationId=inv_cb011cd4-2674-4612-9266-48db6bd927aa"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 underline hover:text-gray-900"
+              >
+                Data Flow Diagram
+              </a>
+              <span className="text-gray-400">|</span>
+              <span className="text-gray-700">GitHub (coming)</span>
+            </div> */}
+            <div className="mb-4">
+              <p className="mb-4 text-gray-700">
+                <span className="font-semibold">Built for:</span> Regulated industries
+                requiring auditability, compliance, and controlled AI execution.
+              </p>
+              <p className="mb-4 text-gray-700">
+                <span className="font-semibold">Production Use Cases:</span> Finance:
+                MNPI firewall, data redaction, client communication review •
+                Healthcare: HIPAA compliance (future) • Government: Data sovereignty
+                enforcement (future)
+              </p>
+            </div>
+          </div>
+        </div>
+      </motion.section>
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+        className="-mt-10"
+      >
+        <div className="mb-6 border-t border-gray-200"></div>
+        <p className="mb-2 text-base font-semibold uppercase tracking-wide text-gray-900">
+          Other Systems
+        </p>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <div>
+            <h3 className="mb-2 text-lg font-normal text-gray-900">
+              RAG Knowledge Assistant
+            </h3>
+            <p className="mb-3 text-gray-700">
+              Converts plain English queries to validated SQL with automatic schema
+              selection, security checks, and dynamic result visualization. Reduces
+              analyst query time from hours to minutes.
+            </p>
+            <div className="flex items-center space-x-2">
+              <a
+                href="https://github.com/ahadb/ask-my-docs-rag-ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 underline hover:text-gray-900"
+              >
+                GitHub ↗
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="mb-2 text-lg font-normal text-gray-900">
+              NLP-to-SQL Dashboard
+            </h3>
+            <p className="mb-3 text-gray-700">
+              Production RAG system with query filtering and semantic retrieval for
+              DoD training documentation. Optimizes precision through multi-stage
+              reranking and domain-specific embeddings.
+            </p>
+            <div className="flex items-center space-x-2">
+              <a
+                href="https://github.com/ahadb/nlp-to-sql-ai"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 underline hover:text-gray-900"
+              >
+                GitHub ↗
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="mb-2 text-lg font-normal text-gray-900">
+              API Gateway
+            </h3>
+            <p className="mb-3 text-gray-700">
+              API Gateway for multi-model LLM orchestration with circuit breakers,
+              retry logic, adaptive rate limiting, and intelligent fallback routing.
+              Handles request validation and traffic shaping for production AI
+              workloads.
+            </p>
+            <div className="flex items-center space-x-2">
+              <a
+                href="https://github.com/ahadb/ai-gateway"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-700 underline hover:text-gray-900"
+              >
+                GitHub ↗
               </a>
             </div>
           </div>
@@ -257,6 +433,185 @@ export default function Personal() {
       </motion.section>
 
       <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+        className="-mt-6"
+      >
+        <p className="mb-2 text-base font-semibold uppercase tracking-wide text-gray-900">
+          Technical Work and Insights
+        </p>
+        <div className="space-y-4 text-gray-700">
+          <div>
+            <p className="text-gray-900">Technical Writing and ADRs (coming soon)</p>
+            <div className="mt-1 flex items-start justify-between gap-4">
+              <div className="flex-1">
+                <p> <span className="font-mono">├─</span> Policy Outcome Model Design</p>
+                <p className="text-gray-600 italic mt-0.5 ml-6">
+                  Framework for modeling and evaluating policy outcomes in AI
+                  governance systems.
+                </p>
+              </div>
+              <span className="text-gray-500 text-right whitespace-nowrap">2026</span>
+            </div>
+            <div className="mt-1 flex items-start justify-between gap-4">
+              <div className="flex-1">
+                <p> <span className="font-mono">├─</span> Sync vs Async Communication Patterns</p>
+                <p className="text-gray-600 italic mt-0.5 ml-6">
+                  Decision framework for choosing synchronous vs asynchronous
+                  communication in distributed AI systems.
+                </p>
+              </div>
+              <span className="text-gray-500 text-right whitespace-nowrap">2026</span>
+            </div>
+            <div className="mt-1 flex items-start justify-between gap-4">
+              <div className="flex-1">
+                <p> <span className="font-mono">├─</span> Modular Monolith to Microservices Strategy</p>
+                <p className="text-gray-600 italic mt-0.5 ml-6">
+                  Migration approach for evolving monolithic AI platforms into
+                  distributed microservices architecture.
+                </p>
+              </div>
+              <span className="text-gray-500 text-right whitespace-nowrap">2026</span>
+            </div>
+            <div className="mt-1 flex items-start justify-between gap-4">
+              <div className="flex-1">
+                <p> <span className="font-mono">└─</span> How the Governance Platform scales 10x → 1000x</p>
+                <p className="text-gray-600 italic mt-0.5 ml-6">
+                  Documenting the evolution and scaling challenges of AI governance
+                  platform.
+                </p>
+              </div>
+              <span className="text-gray-500 text-right whitespace-nowrap">2026</span>
+            </div>
+          </div>
+
+          <div>
+            <p className="text-gray-900">Case Studies</p>
+            <div className="mt-1 flex items-start justify-between gap-4">
+              <div className="flex-1">
+                <p>
+                  {' '}
+                  <span className="font-mono">├─</span>{' '}
+                  <Link
+                    href="/case-studies/nlp-sql-enterprise"
+                    className="underline hover:text-gray-900"
+                  >
+                    NLP-to-SQL Interface for Enterprise Databases
+                  </Link>
+                </p>
+                <p className="text-gray-600 italic mt-0.5 ml-6">
+                  Enables non-technical users to query enterprise databases in plain
+                  English with validation and visualization, reducing analysis time from
+                  hours to minutes.
+                </p>
+              </div>
+              <span className="text-gray-500 text-right whitespace-nowrap">2025</span>
+            </div>
+            <div className="mt-1 flex items-start justify-between gap-4">
+              <div className="flex-1">
+                <p>
+                  {' '}
+                  <span className="font-mono">└─</span>{' '}
+                  <Link
+                    href="/case-studies/rag-document-intelligence"
+                    className="underline hover:text-gray-900"
+                  >
+                    RAG-Powered Document Intelligence System
+                  </Link>
+                </p>
+                <p className="text-gray-600 italic mt-0.5 ml-6">
+                  Production RAG system providing instant, context-aware access to
+                  enterprise documentation with semantic search and source attribution.
+                </p>
+              </div>
+              <span className="text-gray-500 text-right whitespace-nowrap">2025</span>
+            </div>
+          </div>
+
+          {/* <div>
+            <p className="text-gray-900">Blog</p>
+            <div className="mt-1 flex items-start justify-between gap-4">
+              <div className="flex-1">
+                <p>
+                  {' '}
+                  <span className="font-mono">├─</span>{' '}
+                  <Link
+                    href="https://ahadb.github.io/2017/03/27/knowledge-provocateur/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-gray-900"
+                  >
+                    The Knowledge Provocateur
+                  </Link>
+                </p>
+              </div>
+              <span className="text-gray-500 text-right whitespace-nowrap">2017</span>
+            </div>
+            <div className="mt-1 flex items-start justify-between gap-4">
+              <div className="flex-1">
+                <p>
+                  {' '}
+                  <span className="font-mono">└─</span>{' '}
+                  <Link
+                    href="https://ahadb.github.io/2007/10/22/visicalc/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:text-gray-900"
+                  >
+                    Visicalc
+                  </Link>
+                </p>
+              </div>
+              <span className="text-gray-500 text-right whitespace-nowrap">2007</span>
+            </div>
+          </div> */}
+        </div>
+        <div className="mt-8 border-t border-gray-200"></div>
+      </motion.section>
+
+      <motion.section
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+        className="-mt-6"
+      >
+        <p className="mb-2 text-base font-semibold uppercase tracking-wide text-gray-900">
+          Contact
+        </p>
+        <p className="mb-4 text-gray-700">
+          Memphis, TN | Previously New York, NY
+        </p>
+        <p className="mb-4 text-gray-700">
+          Senior Systems Engineer, Solutions Architect roles | Open to relocation
+        </p>
+        <div className="flex items-center space-x-2">
+          <a
+            href="https://www.linkedin.com/in/ahadbokhari/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 underline hover:text-gray-900"
+          >
+            LinkedIn
+          </a>
+          <span className="text-gray-400">|</span>
+          <a
+            href="https://github.com/ahadb"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 underline hover:text-gray-900"
+          >
+            GitHub
+          </a>
+          <span className="text-gray-400">|</span>
+          <a
+            href={`mailto:${EMAIL}`}
+            className="text-gray-700 underline hover:text-gray-900"
+          >
+            Email
+          </a>
+        </div>
+      </motion.section>
+
+      {/* <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
         className="-mt-6"
@@ -517,9 +872,9 @@ export default function Personal() {
           ))}
         </div>
         <div className="mt-8 border-t border-gray-200"></div>
-      </motion.section>
+      </motion.section> */}
 
-      <motion.section
+      {/* <motion.section
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
         className="-mt-6"
@@ -643,7 +998,7 @@ export default function Personal() {
           </div>
         </div>
         <div className="mt-8 border-t border-gray-200"></div>
-      </motion.section>
+      </motion.section> */}
 
       {/* <motion.section
         variants={VARIANTS_SECTION}
@@ -719,244 +1074,6 @@ export default function Personal() {
           </AnimatedBackground>
         </div>
       </motion.section> */}
-
-      <motion.section
-        id="contact"
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-        className="-mt-12 bg-gray-100 px-8 py-8"
-      >
-        <h3 className="mb-2 text-2xl font-normal text-gray-900">Get Started</h3>
-        <p className="mb-4 text-gray-700">
-          Ready to transform your business with AI, cloud architecture, or
-          automation? Let's discuss your project and how I can help you achieve
-          your goals.
-        </p>
-
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
-          {/* Contact Form */}
-          <div className="space-y-6">
-            <form className="space-y-4" onSubmit={handleFormSubmit}>
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label
-                    htmlFor="firstName"
-                    className="mb-1 block text-sm font-medium text-gray-700"
-                  >
-                    First Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full rounded-lg border border-gray-300 bg-white px-3 py-1 text-sm text-gray-900 shadow-sm transition-all duration-200 focus:border-blue-400 focus:outline-none"
-                    placeholder="Your first name"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="lastName"
-                    className="mb-1 block text-sm font-medium text-gray-700"
-                  >
-                    Last Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleInputChange}
-                    required
-                    className="w-full rounded-lg border border-gray-300 bg-white px-3 py-1 text-sm text-gray-900 shadow-sm transition-all duration-200 focus:border-blue-400 focus:outline-none"
-                    placeholder="Your last name"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="mb-1 block text-sm font-medium text-gray-700"
-                >
-                  Email <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full rounded-lg border border-gray-300 bg-white px-3 py-1 text-sm text-gray-900 shadow-sm transition-all duration-200 focus:border-blue-400 focus:outline-none"
-                  placeholder="your.email@company.com"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="company"
-                  className="mb-1 block text-sm font-medium text-gray-700"
-                >
-                  Company
-                </label>
-                <input
-                  type="text"
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleInputChange}
-                  className="w-full rounded-lg border border-gray-300 bg-white px-3 py-1 text-sm text-gray-900 shadow-sm transition-all duration-200 focus:border-blue-400 focus:outline-none"
-                  placeholder="Your company name"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="service"
-                  className="mb-1 block text-sm font-medium text-gray-700"
-                >
-                  Service Interest <span className="text-red-500">*</span>
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full rounded-lg border border-gray-300 bg-white px-3 py-1 text-sm text-gray-900 shadow-sm transition-all duration-200 focus:border-blue-400 focus:outline-none"
-                >
-                  <option value="">Select a service</option>
-                  <option value="ai-integration">AI/LLM Integration</option>
-                  <option value="cloud-architecture">Cloud Architecture</option>
-                  <option value="automation">Automation & Workflows</option>
-                  <option value="strategy">AI Strategy Consulting</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label
-                  htmlFor="message"
-                  className="mb-1 block text-sm font-medium text-gray-700"
-                >
-                  Project Details <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleInputChange}
-                  rows={4}
-                  required
-                  className="w-full resize-none rounded-lg border border-gray-300 bg-white px-3 py-1 text-sm text-gray-900 shadow-sm transition-all duration-200 focus:border-blue-400 focus:outline-none"
-                  placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full rounded-lg bg-gray-900 px-6 py-1 font-medium text-white transition-colors hover:bg-gray-800 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
-              </button>
-
-              {/* Status Messages */}
-              {submitStatus === 'success' && (
-                <p className="text-sm text-green-600">
-                  Message sent successfully! I'll get back to you within 24
-                  hours.
-                </p>
-              )}
-              {submitStatus === 'error' && (
-                <p className="text-sm text-red-600">
-                  There was an error sending your message. Please try again.
-                </p>
-              )}
-            </form>
-          </div>
-
-          {/* Contact Info */}
-          <div className="space-y-6">
-            <div>
-              <h4 className="mb-4 text-lg font-medium text-gray-900">
-                Let's Connect
-              </h4>
-              <p className="mb-6 text-gray-700">
-                I'm here to help you bring your AI, cloud, and automation ideas
-                to life. Whether you need a quick consultation or want to
-                discuss a full project, let's start the conversation.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className="flex-shrink-0">
-                  <svg
-                    className="h-5 w-5 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M13 10V3L4 14h7v7l9-11h-7z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-gray-900">
-                    Response Time
-                  </p>
-                  <p className="text-sm text-gray-600">Within 24 hours</p>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <div className="flex-shrink-0">
-                  <svg
-                    className="h-5 w-5 text-blue-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-sm font-medium text-gray-900">
-                    Availability
-                  </p>
-                  <p className="text-sm text-gray-600">Limited availability</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="pt-4">
-              <h5 className="mb-4 text-lg font-medium text-gray-900">
-                Follow & Connect
-              </h5>
-              <div className="flex items-center space-x-3">
-                {SOCIAL_LINKS.map((link) => (
-                  <MagneticSocialLink key={link.label} link={link.link}>
-                    {link.label}
-                  </MagneticSocialLink>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.section>
 
       {/* Strategy Modal */}
       <StrategyModal

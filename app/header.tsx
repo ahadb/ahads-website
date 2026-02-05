@@ -38,7 +38,7 @@ export function Header() {
               Ahad Bokhari
             </Link>
             <p className="text-lg font-medium text-gray-500">
-              Gen AI & Solutions Engineer
+              Senior Systems & AI Software Engineer
             </p>
           </div>
         </div>

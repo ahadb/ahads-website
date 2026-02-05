@@ -11,12 +11,12 @@ export function Navigation() {
         >
           Home
         </Link>
-        <Link
+        {/* <Link
           href="/case-studies"
           className="text-sm text-gray-600 transition-colors hover:text-gray-900"
         >
           Outcomes
-        </Link>
+        </Link> */}
         <Link
           href="/blog"
           className="text-sm text-gray-600 transition-colors hover:text-gray-900"
