@@ -442,10 +442,19 @@ export default function Personal() {
         </p>
         <div className="space-y-4 text-gray-700">
           <div>
-            <p className="text-gray-900">Technical Writing and ADRs (coming soon)</p>
+            <p className="text-gray-900">ADRs</p>
             <div className="mt-1 flex items-start justify-between gap-4">
               <div className="flex-1">
-                <p> <span className="font-mono">├─</span> Policy Outcome Model Design</p>
+                <p>
+                  {' '}
+                  <span className="font-mono">├─</span>{' '}
+                  <Link
+                    href="/adrs/policy-outcome-model-design"
+                    className="underline hover:text-gray-900"
+                  >
+                    Policy Outcome Model Design
+                  </Link>
+                </p>
                 <p className="text-gray-600 italic mt-0.5 ml-6">
                   Framework for modeling and evaluating policy outcomes in AI
                   governance systems.
@@ -465,7 +474,7 @@ export default function Personal() {
             </div>
             <div className="mt-1 flex items-start justify-between gap-4">
               <div className="flex-1">
-                <p> <span className="font-mono">├─</span> Modular Monolith to Microservices Strategy</p>
+                <p> <span className="font-mono">└─</span> Modular Monolith to Microservices Strategy</p>
                 <p className="text-gray-600 italic mt-0.5 ml-6">
                   Migration approach for evolving monolithic AI platforms into
                   distributed microservices architecture.
@@ -473,6 +482,10 @@ export default function Personal() {
               </div>
               <span className="text-gray-500 text-right whitespace-nowrap">2026</span>
             </div>
+          </div>
+
+          <div>
+            <p className="text-gray-900">Technical Writing (coming soon)</p>
             <div className="mt-1 flex items-start justify-between gap-4">
               <div className="flex-1">
                 <p> <span className="font-mono">└─</span> How the Governance Platform scales 10x → 1000x</p>
