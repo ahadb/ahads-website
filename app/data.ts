@@ -295,6 +295,124 @@ If we need outcome combinations (REDACT + ESCALATE simultaneously)`,
     status: 'Accepted',
     date: '2026',
   },
+  {
+    number: 'ADR-002',
+    title: 'Synchronous vs Async Communication Patterns',
+    slug: 'sync-vs-async-communication-patterns',
+    context: `The system has multiple components that need to communicate: Gateway calls Policy Engine, policies write to Audit Logger, escalations go to HITL Queue, etc. Each interaction could be sync (caller waits for response) or async (fire-and-forget or eventual response).
+The core question: when should we block waiting for a response vs. when should we publish an event and move on?`,
+    decision: `Use sync for the main request flow, async for everything else.
+Synchronous (caller waits):
+
+• Gateway → Policy Engine (input evaluation)
+• Gateway → Model Router
+• Gateway → Policy Engine (output evaluation)
+• HITL Service → Gateway (when human makes decision and request resumes)
+
+Asynchronous (fire-and-forget):
+
+• Any component → Audit Logger
+• Policy Engine → HITL Queue (when escalation happens)
+• All background jobs (metrics, cleanup, archiving)
+
+Why this split:
+
+Main request flow is sync because the user is waiting. Can't return a response without knowing if policies passed.
+Logging is async because it shouldn't slow down responses. If audit write fails, retry in background.
+HITL escalation is async because human review takes minutes/hours. Can't block the request thread that long.`,
+    alternatives: `All sync:
+Rejected because logging and escalations would block request threads. A slow database write blocks the entire request. Trade-off: Simpler code for worse performance.
+All async:
+Rejected because the main flow requires answers before proceeding. You can't route to a model without knowing which model to use. Trade-off: Lower latency for broken semantics.
+Async HITL with webhooks:
+Rejected for v1 because it requires the caller to provide a callback URL and handle async responses. Enterprise clients aren't ready for this. Trade-off: Simpler client integration for blocked request threads during review.`,
+    consequences: `Wins:
+
+• Main request flow is fast (only blocks on necessary decisions)
+• Audit logging never slows down responses
+• Clear separation: sync = user is waiting, async = background work
+• Can scale audit and HITL independently from request handling
+
+Costs:
+
+• Dual communication patterns (both REST and message queue)
+• More infrastructure (need Redis/Kafka for async)
+• Failure modes are different (sync = retry immediately, async = dead letter queue)
+• HITL escalations block request threads (can't handle millions of concurrent reviews)
+
+When to revisit:
+
+If HITL review volume grows to thousands/day (need async with webhooks)
+If audit writes become a bottleneck (need faster async pipeline)
+If policy evaluation becomes slow enough that sync calls are noticeable (>100ms)`,
+    status: 'Accepted',
+    date: '2026',
+  },
+  {
+    number: 'ADR-003',
+    title: 'Modular Monolith to Microservices Strategy',
+    slug: 'modular-monolith-to-microservices-strategy',
+    context: `We could build this as microservices from day one or start as a monolith. The architecture has clear components—Gateway, Policy Engine, Audit Logger, HITL Queue, Model Router—that could be separate services.
+Microservices are the default for "scalable systems," but they come with real operational overhead: service discovery, distributed tracing, network calls instead of function calls, deployment orchestration, data consistency across services. For a 3-week MVP, that's a lot of infrastructure for unclear benefit.
+But we also know this needs to scale eventually. Audit logging has different scaling characteristics than policy evaluation. At high traffic, these need to be independent services.
+The question: do we pay the microservices tax upfront, or start simple and split later?`,
+    decision: `Start as a modular monolith. Design for microservices decomposition from day one.
+All components run in a single FastAPI application, but they're structured as independent modules with clear boundaries:
+
+/gateway - API routes and orchestration
+/policy_engine - Evaluation logic and module registry
+/audit - Logging service
+/hitl - Review queue management
+/model_router - LLM abstraction layer
+
+Each module:
+
+• Has its own interface (not directly importing from other modules)
+• Owns its data access (no cross-module database queries)
+• Communicates through defined contracts
+• Could be extracted to a service by wrapping in HTTP/gRPC
+
+Single deployment, single database, single process. But architected so that extracting a service is moving a folder to a new repo and adding a network boundary, not rewriting code.
+Decomposition strategy (when to split):
+
+• Audit Service first (10x traffic) - High write volume, read occasionally. Different scaling profile.
+• Policy Engine second (100x traffic) - CPU-intensive evaluation becomes bottleneck.
+• HITL Service third (if review volume grows) - Async workflows, different availability needs.
+• Full microservices (1000x traffic) - Gateway becomes thin orchestrator, everything else independent.`,
+    alternatives: `Microservices from day one:
+Rejected because it adds weeks to development for features we don't need yet (service mesh, distributed tracing, deployment orchestration). Trade-off: Premature complexity for theoretical future scale.
+Pure monolith (no module boundaries):
+Rejected because splitting later would require major refactoring. Tight coupling makes extraction expensive. Trade-off: Faster initial development for painful future migration.
+Serverless (Lambda functions):
+Rejected because the request flow is orchestration-heavy with state. Lambda works for independent functions, not multi-step workflows with shared context. Trade-off: Auto-scaling for poor fit to problem domain.
+Service-per-policy-module:
+Rejected because policy modules are plugins, not services. Each module is ~100 lines of code. The overhead of making each one a service is absurd. Trade-off: Maximum isolation for operational nightmare.`,
+    consequences: `Wins:
+
+• Single deployment (docker-compose up, done)
+• Fast development (no network calls, no service discovery)
+• Easier debugging (single process, stack traces work)
+• Lower infrastructure cost (one container vs five)
+• Designed for split (clear boundaries, defined interfaces)
+• Can defer microservices decisions until actual bottlenecks appear
+
+Costs:
+
+• Can't scale components independently yet (audit and policy engine share resources)
+• Single point of failure (if the process crashes, everything crashes)
+• Shared database initially (can't optimize storage per service)
+• Deploy together (can't update audit service without redeploying everything)
+• Risk of coupling creep (need discipline to maintain boundaries)
+
+When to revisit:
+
+When audit writes become bottleneck (>1000 writes/sec, PostgreSQL struggling)
+When policy engine CPU consumption separates from gateway (different scaling needs visible)
+When team grows beyond 3-4 people (separate ownership needed)
+When different components need different deployment schedules (audit changes daily, core is stable)`,
+    status: 'Accepted',
+    date: '2026',
+  },
 ]
 
 export const EMAIL = 'ahadbokhari@gmail.com'

@@ -236,7 +236,7 @@ export default function Personal() {
             <p className="mb-2 font-semibold text-gray-900">
               Core Expertise:
             </p>
-            <p className="text-gray-700">
+          <p className="text-gray-700">
               Event-driven architecture • API orchestration • Service boundaries &
               contracts • Stakeholder engagement & cross-functional delivery • AI
               governance & policy enforcement • Agentic systems • Execution control
@@ -246,8 +246,8 @@ export default function Personal() {
           <div className="mt-1 flex items-center space-x-2">
             <a
               href="https://www.linkedin.com/in/ahadbokhari/"
-              target="_blank"
-              rel="noopener noreferrer"
+                target="_blank"
+                rel="noopener noreferrer"
               className="text-gray-700 underline hover:text-gray-900"
             >
               LinkedIn
@@ -464,7 +464,16 @@ export default function Personal() {
             </div>
             <div className="mt-1 flex items-start justify-between gap-4">
               <div className="flex-1">
-                <p> <span className="font-mono">├─</span> Sync vs Async Communication Patterns</p>
+                <p>
+                  {' '}
+                  <span className="font-mono">├─</span>{' '}
+                  <Link
+                    href="/adrs/sync-vs-async-communication-patterns"
+                    className="underline hover:text-gray-900"
+                  >
+                    Sync vs Async Communication Patterns
+                  </Link>
+                </p>
                 <p className="text-gray-600 italic mt-0.5 ml-6">
                   Decision framework for choosing synchronous vs asynchronous
                   communication in distributed AI systems.
@@ -474,7 +483,16 @@ export default function Personal() {
             </div>
             <div className="mt-1 flex items-start justify-between gap-4">
               <div className="flex-1">
-                <p> <span className="font-mono">└─</span> Modular Monolith to Microservices Strategy</p>
+                <p>
+                  {' '}
+                  <span className="font-mono">└─</span>{' '}
+                  <Link
+                    href="/adrs/modular-monolith-to-microservices-strategy"
+                    className="underline hover:text-gray-900"
+                  >
+                    Modular Monolith to Microservices Strategy
+                  </Link>
+                </p>
                 <p className="text-gray-600 italic mt-0.5 ml-6">
                   Migration approach for evolving monolithic AI platforms into
                   distributed microservices architecture.
