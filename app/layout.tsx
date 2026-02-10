@@ -13,16 +13,16 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nim-fawn.vercel.app/'),
+  metadataBase: new URL('https://ahadbokhari.com/'),
   alternates: {
     canonical: '/',
   },
   title: {
     default: 'Ahad Bokhari - Senior Systems & AI Software Engineer',
-    template: '%s | Nim',
+    template: '%s | Ahad Bokhari',
   },
   description:
-    'Nim is a free and open-source personal website template built with Next.js 15, React 19 and Motion-Primitives.',
+    'Senior Systems & AI Software Engineer building production AI systems for high-stakes environments. 15+ years enterprise experience, 7 years Wall Street. Specializing in AI governance, orchestration, and production readiness.',
 }
 
 const geist = Geist({
