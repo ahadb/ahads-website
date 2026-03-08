@@ -226,9 +226,10 @@ export default function Personal() {
           </p>
           <p className="mb-4 text-gray-700">
             Recently I've focused on making AI systems deployable in real
-            environments by applying traditional engineering practices—clear
-            service boundaries, deterministic execution paths, and observable
-            system behavior.
+            environments by constraining probabilistic LLM behavior with
+            traditional engineering practices—clear service boundaries,
+            deterministic execution paths, validation, and observable system
+            behavior.
           </p>
           <div className="mb-4">
             <p className="mb-2 font-semibold text-gray-900">
