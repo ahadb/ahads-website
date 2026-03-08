@@ -215,32 +215,30 @@ export default function Personal() {
       >
         <div className="flex flex-col">
           <p className="mb-4 text-gray-700">
-            I build production AI systems for high-stakes environments where
-            failure has consequences.
+            I build backend systems and AI-driven services for regulated and
+            enterprise environments.
           </p>
           <p className="mb-4 text-gray-700">
-            15+ years building enterprise platforms. 7 years on Wall Street
-            equities desks (Nomura VP, JP Morgan) taught me what production
-            systems in regulated environments actually require—not demos, but
-            infrastructure with policy enforcement, audit trails, and controlled
-            execution. Most recently: applying that discipline to AI platforms for
-            defense contractors.
+            My background is in trading and financial infrastructure, where
+            reliability, validation, and controlled execution are critical. Most
+            of my work involves Python services, event-driven systems, and
+            integrating LLM capabilities into production software.
           </p>
           <p className="mb-4 text-gray-700">
-            I focus on the gap between AI capabilities and production readiness.
-            Enterprises need governance layers, orchestration systems, and
-            execution controls that make LLMs deployable in finance, defense, and
-            other regulated industries.
+            Recently I've focused on making AI systems deployable in real
+            environments by applying traditional engineering practices—clear
+            service boundaries, deterministic execution paths, and observable
+            system behavior.
           </p>
           <div className="mb-4">
             <p className="mb-2 font-semibold text-gray-900">
-              Core Expertise:
+              Core expertise
             </p>
-          <p className="text-gray-700">
-              Event-driven architecture • API orchestration • Service boundaries &
-              contracts • Stakeholder engagement & cross-functional delivery • AI
-              governance & policy enforcement • Agentic systems • Execution control
-              & workflow reliability • RAG pipelines • Production observability
+            <p className="text-gray-700">
+              Backend systems engineering • Event-driven services • API design and
+              service integration • Python-based AI services • Agent workflows •
+              RAG pipelines • Execution validation • Production monitoring and
+              observability
             </p>
           </div>
           <div className="mt-1 flex items-center space-x-2">
@@ -367,16 +365,17 @@ export default function Personal() {
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-3">
           <div>
             <h3 className="mb-2 text-lg font-normal text-gray-900">
-              RAG Knowledge Assistant
+              Agentic Finance Platform (Constrained)
             </h3>
             <p className="mb-3 text-gray-700">
-              Converts plain English queries to validated SQL with automatic schema
-              selection, security checks, and dynamic result visualization. Reduces
-              analyst query time from hours to minutes.
+              Constrained planner–executor API for regulated finance: the LLM
+              proposes a plan (tool calls); validation and execution are
+              deterministic and auditable. Clear audit trail, no black-box
+              execution, governance plug-in before any tool runs.
             </p>
             <div className="flex items-center space-x-2">
               <a
-                href="https://github.com/ahadb/ask-my-docs-rag-ai"
+                href="https://github.com/ahadb/constrained-agentic-enterprise"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-700 underline hover:text-gray-900"
@@ -388,16 +387,16 @@ export default function Personal() {
 
           <div>
             <h3 className="mb-2 text-lg font-normal text-gray-900">
-              NLP-to-SQL Dashboard
+              Trading Platform
             </h3>
             <p className="mb-3 text-gray-700">
-              Production RAG system with query filtering and semantic retrieval for
-              DoD training documentation. Optimizes precision through multi-stage
-              reranking and domain-specific embeddings.
+              Simulated event-driven domestic equities trading platform: trade
+              booking, blotter, positions, and P&L. Exposes a REST API and an MCP
+              server for agentic workflows.
             </p>
             <div className="flex items-center space-x-2">
               <a
-                href="https://github.com/ahadb/nlp-to-sql-ai"
+                href="https://github.com/ahadb/equities-trading-platform"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-700 underline hover:text-gray-900"
@@ -610,9 +609,6 @@ export default function Personal() {
         </p>
         <p className="mb-4 text-gray-700">
           Memphis, TN | Previously New York, NY
-        </p>
-        <p className="mb-4 text-gray-700">
-          Senior Systems Engineer, Solutions Architect roles | Open to relocation
         </p>
         <div className="flex items-center space-x-2">
           <a
